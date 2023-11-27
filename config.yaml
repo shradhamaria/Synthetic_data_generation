@@ -1,0 +1,52 @@
+# adjust the parameters accordingly in this config file
+
+# object on which other objects should sample on
+base_object:
+    index: 0
+
+# object location range and rotation during sampling
+object_sampler:
+    location_min: [-0.855324531, -0.2000, -0.01999998]
+    location_max: [0.825324531, 0.49590134, 1.21999998]
+    rotation: [1.57079637, -0., 0.]
+
+# camera location range during sampling
+camera_sampler:
+    location_min: [-2.2577, -2.25, 0.9578]
+    location_max: [2.2577, 2.25, 4.9578]
+
+# Number of images you want to generate (int)
+num_images: 2
+
+# Number of objects (int)
+num_objects: 8
+
+# maximum tries for objects to sample (int)
+max_tries: 100
+
+# emission strength of objects (float)
+emission_strength_objects: 5.0
+
+# amount of samples, which should be used for the color rendering (int)
+rendering_samples: 50
+
+# rigid body parameters
+rigidbody_parameters:
+    collision_margin: 0.001
+    collision_mesh_source: 'FINAL'
+    mass_scaling: False
+    mass_factor: 1
+    collision_shape: "CONVEX_HULL"
+    friction: 0.5
+    angular_damping: 0.1
+    linear_damping: 0.04
+
+# Physics simulation parameters
+physics_simulation:
+    min_simulation_time: 0.75
+    max_simulation_time: 1.5
+    check_object_interval: 2.0
+    object_stopped_location_threshold: 0.01
+    object_stopped_rotation_threshold: 0.1
+    substeps_per_frame: 10
+    solver_iters: 10
